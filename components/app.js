@@ -8,7 +8,7 @@ template.innerHTML = `
     }
   </style>
   <div class="container">
-      <header-component menu="login"></header-component>
+      <header-component id="header" menu="login"></header-component>
         <slot name="page"></slot>
       <footer-component></footer-component>
   </div>
@@ -28,9 +28,12 @@ window.customElements.define(
 
     changePage() {
       const urlParams = new URLSearchParams(window.location.search);
-      const pageName = pages.includes(urlParams.get("page"))
-        ? urlParams.get("page")
-        : "notfound";
+      const pageName = urlParams.has("page")
+        ? pages.includes(urlParams.get("page"))
+          ? urlParams.get("page")
+          : "notfound"
+        : "home";
+      this.shadowRoot.getElementById("header").setAttribute("menu", pageName);
       document.getElementById(this.nodeName).innerHTML = `
           <${pageName}-page slot="page" class="page"></${pageName}-page>
   `;
