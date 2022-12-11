@@ -31,7 +31,7 @@ template.innerHTML = `
   border-radius: 12px;
   margin-bottom: 15px;
   transition: background 0.3s;
-  color: var(--c4);
+  color: var(--c11);
   font-family: "Vazirmatn";
 }
 
