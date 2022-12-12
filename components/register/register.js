@@ -81,7 +81,7 @@ template.innerHTML = `
   margin: auto;
   padding: 15px;
   text-decoration: none;
-  color: var(--c10)
+  color: var(--c10);
   font-family: "Vazirmatn";
 }
 </style>
