@@ -50,19 +50,12 @@ template.innerHTML = `
 .the-form [type="text"]:focus,
 .the-form [type="email"]:focus,
 .the-form [type="password"]:focus {
-  background: var(--c2);
-  border-color: var(--c6);
-  color: var(--c7);
+  outline:none;
+  border-color: var(--c1);
 }
 
 #passport_number:focus{
   direction:ltr;
-}
-
-.the-form [type="text"]:focus::placeholder,
-.the-form [type="email"]:focus::placeholder,
-.the-form [type="password"]:focus::placeholder {
-  color: var(--c8);
 }
 
 .the-form [type="submit"] {
