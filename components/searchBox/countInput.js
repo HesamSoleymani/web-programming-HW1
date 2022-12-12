@@ -12,6 +12,8 @@ template.innerHTML = `
         display:flex;
     }
     input{
+        color: var(--c1);
+        background: var(--c2);
         min-width: 0;
         text-align:center;
         border:none;
