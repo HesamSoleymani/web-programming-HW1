@@ -16,7 +16,7 @@ template.innerHTML = `
         }
         .blog-posts{
           width:80%;
-          margin:80px auto 40px auto;
+          margin:120px auto 40px auto;
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           grid-column-gap:40px;
@@ -34,9 +34,9 @@ template.innerHTML = `
       <search-box class="search"></search-box>
     </div>
     <div class="blog-posts">
-      <post-cover></post-cover>
-      <post-cover></post-cover>
-      <post-cover></post-cover>
+      <post-cover src="../../assets/images/blogPostsCovers/1.jpg" title="عنوان مطلب ۱"></post-cover>
+      <post-cover src="../../assets/images/blogPostsCovers/2.jpg" title="عنوان مطلب ۲"></post-cover>
+      <post-cover src="../../assets/images/blogPostsCovers/3.jpg" title="عنوان مطلب ۳"></post-cover>
     </div>
 `;
 

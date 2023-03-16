@@ -3,7 +3,6 @@ template.innerHTML = `
   <style>
     .container {
         border-radius:20px;
-        background-image: url("../../assets/images/blogPostsCovers/1.jpg");
         background-size:cover;
         background-position:center;
         height: 220px;
@@ -28,9 +27,8 @@ template.innerHTML = `
     }
   </style>
 
-  <div class="container">
-    <h5 class="title">
-        عنوان مطلب  
+  <div class="container" id="cover">
+    <h5 class="title" id="title">
     </h5>
   </div>
 `;
@@ -42,6 +40,13 @@ window.customElements.define(
       super()
         .attachShadow({ mode: "open" })
         .appendChild(template.content.cloneNode(true));
+    }
+    connectedCallback() {
+      this.shadowRoot.getElementById(
+        "cover"
+      ).style.backgroundImage = `url("${this.getAttribute("src")}")`;
+      this.shadowRoot.getElementById("title").innerHTML =
+        this.getAttribute("title");
     }
   }
 );

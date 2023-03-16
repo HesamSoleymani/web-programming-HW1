@@ -3,14 +3,31 @@
   --c2: white;
   --c3: #f6f6f6;
   --c4: #18465a;
-  --c5: #A9A9A9;
+  --c5: #a9a9a9;
   --c6: #4a304d;
   --c7: #222222;
   --c8: #666666;
-  --c9: #18465A;
-  --c10: #9EC1D7;
-  --c11: #1B1C27;
+  --c9: #18465a;
+  --c10: #9ec1d7;
+  --c11: #1b1c27;
   direction: rtl;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c1: white;
+    --c2: black;
+    --c3: #1b1c27;
+    --c4: #318cb4;
+    --c5: #a9a9a9;
+    --c6: #4a304d;
+    --c7: #222222;
+    --c8: #666666;
+    --c9: #18465a;
+    --c10: #9ec1d7;
+    --c11: #f6f6f6;
+    direction: rtl;
+  }
 }
 
 @font-face {
@@ -34,6 +51,8 @@
 body {
   margin: 0;
   font-family: "Vazirmatn";
+  background-color: var(--c2);
+  color: var(--c1);
 }
 
 .page {
